@@ -18,16 +18,27 @@ const booking = sequelize.define('Booking', {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
     },
-    user_id:{
-        type: Sequelize.STRING,
-        allowNull: false
+    user_id: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        references: {
+            model: 'users',
+            key: 'uid'
+        }
     },
     created_AT: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
-  }
-},{
-  timestamps: false
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    }
+}, {
+    tableName: 'bookings',
+    timestamps: false,
+    indexes: [
+        {
+            unique: true,
+            fields: ['event_id', 'user_id'] // защита от двойного бронирования
+        }
+    ]
 })
 
 

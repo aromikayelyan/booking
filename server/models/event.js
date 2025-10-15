@@ -1,4 +1,3 @@
-
 import Sequelize from "sequelize"
 import sequelize from "../utils/connect.js"
 
@@ -13,7 +12,7 @@ const event = sequelize.define('Event', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    ustotal_seats:{
+    total_seats:{
         type: Sequelize.INTEGER,
         allowNull: false
     }
