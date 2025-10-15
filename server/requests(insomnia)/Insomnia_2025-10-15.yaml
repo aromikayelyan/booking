@@ -1,0 +1,139 @@
+type: collection.insomnia.rest/5.0
+name: booking
+meta:
+  id: wrk_73afd82bd938416e8ee052ab475898dc
+  created: 1760557702869
+  modified: 1760557702869
+  description: ""
+collection:
+  - url: localhost:3600/booking/reserve
+    name: booking reserve
+    meta:
+      id: req_b91a3804b93d471eb516dd004dcfca6f
+      created: 1760557714155
+      modified: 1760560079765
+      isPrivate: false
+      description: ""
+      sortKey: -1760557714155
+    method: POST
+    body:
+      mimeType: application/json
+      text: |2-
+         {
+        	 "event_id": 2,
+        	 "user_id": 1
+         }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3600/user/reg
+    name: create User
+    meta:
+      id: req_877ab1c6ebe04ae7b8ddc7a23b181f42
+      created: 1760558465174
+      modified: 1760558513819
+      isPrivate: false
+      description: ""
+      sortKey: -1759222953130.5
+    method: POST
+    body:
+      mimeType: application/json
+      text: |2-
+         {
+        	 "username": "user123"
+         }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3600/user
+    name: get all users
+    meta:
+      id: req_78fb1fde954541a6b749ccd5676dc44b
+      created: 1760558568610
+      modified: 1760558575791
+      isPrivate: false
+      description: ""
+      sortKey: -1758555572618.25
+    method: GET
+    body:
+      mimeType: application/json
+      text: |2-
+         {
+        	 "username": "user123"
+         }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: localhost:3600/events/create
+    name: Create event
+    meta:
+      id: req_516f97da6de5428d9e904cda34d32bfe
+      created: 1760558895853
+      modified: 1760559060278
+      isPrivate: false
+      description: ""
+      sortKey: -1759890333642.75
+    method: POST
+    body:
+      mimeType: application/json
+      text: |2-
+         {
+        	 "name": "Coca-Cola FEstival",
+        	 "total_seats": 223
+         }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_55e1ff49921e973c877f28f173d04516ab5dd16e
+    created: 1760557702893
+    modified: 1760557702893
+environments:
+  name: Base Environment
+  meta:
+    id: env_55e1ff49921e973c877f28f173d04516ab5dd16e
+    created: 1760557702881
+    modified: 1760557702881
+    isPrivate: false
