@@ -1,4 +1,6 @@
 import express from "express";
+import bookingRoute from './routes/bookingRoute.js'
+import { syncDb } from "./models/index.js";
 
 
 const app = express()
@@ -6,6 +8,9 @@ const PORT = process.env.PORT || 3600
 
 
 app.use(express.json())
+app.use('/booking', bookingRoute)
+
+// syncDb()
 
 const start = () => {
     try {

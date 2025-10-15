@@ -10,7 +10,8 @@ const user = sequelize.define('User', {
     },
     uid: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true 
     },
     username:{
         type: Sequelize.STRING,

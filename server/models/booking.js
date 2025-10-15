@@ -9,29 +9,28 @@ const booking = sequelize.define('Booking', {
         type: Sequelize.INTEGER
     },
     event_id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false,
         references: {
-            model: 'Event',
+            model: 'Events',
             key: 'id'
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
     },
     user_id: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false,
         references: {
-            model: 'users',
+            model: 'Users',
             key: 'uid'
         }
     },
     created_AT: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
     }
 }, {
-    tableName: 'bookings',
     timestamps: false,
     indexes: [
         {

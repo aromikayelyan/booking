@@ -1,7 +1,7 @@
 import sequelize from "../utils/connect.js";
-import User from "./User.js";
-import Event from "./Event.js";
-import Booking from "./Booking.js";
+import User from "./user.js";
+import Event from "./event.js";
+import Booking from "./booking.js";
 
 
 Event.hasMany(Booking, { foreignKey: 'event_id', sourceKey: 'id' });
