@@ -11,7 +11,7 @@ Booking Service
 
 
 
-git clone <твоя-ссылка-на-репо>
+git clone https://github.com/aromikayelyan/booking.git
 cd server
 
 2. Устанавливаем зависимости:
